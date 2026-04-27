@@ -15,7 +15,7 @@ public class Searcha {
     public static void main(String[] args) {
 
         ScheduledExecutorService agendador = Executors.newSingleThreadScheduledExecutor();
-        System.out.println("### MONITOR DE PASSAGENS INICIADO (GEMINI 2.5 FLASH) ###");
+        System.out.println("### MONITOR DE PREÇOS INICIADO (GEMINI 3.1 FLASH) ###");
 
         agendador.scheduleAtFixedRate(Searcha::executarBusca, 0, 1, TimeUnit.MINUTES);
     }
@@ -23,9 +23,9 @@ public class Searcha {
     private static void executarBusca() {
         try {
             String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
-            System.out.println("\n--- Iniciando Pesquisa de Voos: " + timestamp + " ---");
+            System.out.println("\n--- Iniciando Pesquisa de Preços: " + timestamp + " ---");
 
-            String prompt = "procure por Pcs gamer ate 3000 reias e me mande o link pode procurar rasamente na web e nao me mande nada alem do valor e o link mas revise se o link esta ativo e funcionenado para a data de 26/04/2026";
+            String prompt = "Procure por Pcs gamer ate 3000 reias e me mande o link pode procurar rasamente na web e nao me mande nada alem do valor e o link mas revise se o link esta ativo e funcionando";
 
             String jsonPayload = "{\"contents\": [{\"parts\":[{\"text\": \"" + prompt + "\"}]}]}";
 
