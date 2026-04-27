@@ -10,7 +10,7 @@ import java.time.format.DateTimeFormatter;
 
 public class Searcha {
 
-    private static final String URL_API = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyCpiUek1NdZGScqKqZSUWyFeTXE3iuYegw";
+    private static final String URL_API = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyBkAU97X3HrfwQk2jMRXYSphjH5_FyXCvo";
 
     public static void main(String[] args) {
 
@@ -25,7 +25,7 @@ public class Searcha {
             String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
             System.out.println("\n--- Iniciando Pesquisa de Voos: " + timestamp + " ---");
 
-            String prompt = "procure por cadeiras grandes ate 3000 reias e me mande o link pode procurar rasamente na web e nao me mande nada alem do valor e o link mas revise se o link esta ativo e funcionenado para a data de 26/04/2026";
+            String prompt = "procure por Pcs gamer ate 3000 reias e me mande o link pode procurar rasamente na web e nao me mande nada alem do valor e o link mas revise se o link esta ativo e funcionenado para a data de 26/04/2026";
 
             String jsonPayload = "{\"contents\": [{\"parts\":[{\"text\": \"" + prompt + "\"}]}]}";
 
