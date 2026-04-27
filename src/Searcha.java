@@ -15,7 +15,7 @@ public class Searcha {
     public static void main(String[] args) {
 
         ScheduledExecutorService agendador = Executors.newSingleThreadScheduledExecutor();
-        System.out.println("### MONITOR DE PREÇOS INICIADO (GEMINI 2.5 FLASH) ###");
+        System.out.println("### MONITOR DE PREÇOS INICIADO (GEMINI 3.1 FLASH) ###");
 
         agendador.scheduleAtFixedRate(Searcha::executarBusca, 0, 1, TimeUnit.MINUTES);
     }
