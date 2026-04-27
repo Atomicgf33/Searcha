@@ -25,7 +25,7 @@ public class Searcha {
             String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
             System.out.println("\n--- Iniciando Pesquisa de Voos: " + timestamp + " ---");
 
-            String prompt = "procure por notebook barato ate 3000 reias e me mande o link pode procurar rasamente na web e nao me mande nada alem do valor e o link mas revise se o link esta ativo e funcionenado para a data de 26/04/2026";
+            String prompt = "procure por pc barato ate 3000 reias e me mande o link pode procurar rasamente na web e nao me mande nada alem do valor e o link mas revise se o link esta ativo e funcionenado para a data de 26/04/2026";
 
             String jsonPayload = "{\"contents\": [{\"parts\":[{\"text\": \"" + prompt + "\"}]}]}";
 
